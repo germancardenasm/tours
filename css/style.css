@@ -6,19 +6,26 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
-*{
+*, 
+*::before,
+*::after
+{
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
+}
+
+html{
+  font-size: 62.5%;
 }
 
 body{
   font-family: Lato, 'Courier New', Courier, monospace;
-  font-size: 16px;
   font-weight: 400;
   line-height: 1.7;
   color: #777777;
   padding: 30px;
+  box-sizing: border-box;
 }
 
 .header{
@@ -30,16 +37,16 @@ body{
   clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
 }
 
-.logo-container{
+.header__logo-container{
   position: absolute;
-  top:30px;
-  left: 30px;
+  top:3rem;
+  left: 3rem;
 }
 
-.logo-image{
-  width: 60px;
+.header__logo-image{
+  width: 6rem;
 }
-.title-container{
+.header__title-container{
   position: absolute;
   top: 40%;
   left: 50%;
@@ -50,51 +57,47 @@ body{
 .main-title{
   color: #ffffff;
   backface-visibility: hidden;
-  margin-bottom: 30px;
+  margin-bottom:3rem;
 }
 
-.title-big{
+.main-title--main{
   text-transform: uppercase;
   display: block;
-  font-size: 50px;
+  font-size: 5rem;
   font-weight: 400;
-  letter-spacing: 19px;
+  letter-spacing: 1.9rem;
   animation-name: slideToRight;
   animation-duration: 1s;
     animation-timing-function: ease-out;
 }
 
-.title-small{
+.main-title--sub{
     text-transform: uppercase;
     display: block;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 700;
-    letter-spacing: 8.7px;
+    letter-spacing:0.87rem;
     animation-name: slideToLeft;
     animation-duration: 1s;
 }
-
 
 .btn, .btn:link,
 .btn:visited{
   display: inline-block;
   position: relative;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 700;
   text-decoration: none;
-  border-radius: 100px;
-  padding: 0 20px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10rem;
+  padding: 0 2rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
   transition: all 0.2s;
- 
 }
 
-
-
 .btn:hover{
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
-    transform: translateY(-3px);
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+    transform: translateY(-0.3rem);
 }
 
 .btn::after{
@@ -107,7 +110,7 @@ body{
   height: 100%;
   z-index: -1;
   background-color: #ffffff;
-  border-radius: 100px;
+  border-radius: 10rem;
   transition: all 0.3s ;
 }
 
@@ -117,26 +120,26 @@ body{
 }
 
 .btn:active{
-    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.3);
-    transform: translateY(-2px);
+    box-shadow: 0 0.7rem 1rem rgba(0, 0, 0, 0.3);
+    transform: translateY(-0.2rem);
 }
 
-.btn-white{
+.btn--white{
     background-color: #ffffff;
     color: #777;
 }
 
-.btn-animated{
+.btn--animated{
   animation: slideUp 1s ease-out 0.5s;
   animation-fill-mode: backwards;
 }
 
 @keyframes slideToRight {
  0%{
-    transform: translateX(-100px);
+    transform: translateX(-10rem);
  }
  80%{
-    transform: translateX(5px);
+    transform: translateX(0.5rem);
  }
  100%{
     transform: translateX(0);
@@ -145,10 +148,10 @@ body{
 
 @keyframes slideToLeft {
   0%{
-     transform: translateX(100px);
+     transform: translateX(10rem);
   }
   80%{
-      transform: translateX(-5px);
+      transform: translateX(-0.5rem);
    }
   100%{
      transform: translateX(0);
@@ -157,7 +160,7 @@ body{
 
 @keyframes slideUp {
     0%{
-       transform: translateY(50px);
+       transform: translateY(5rem);
        opacity: 0;
     }
    
