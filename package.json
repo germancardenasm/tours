@@ -1,0 +1,23 @@
+{
+  "name": "tours",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node-sass ./sass/main.scss ./css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/germancardenasm/tours.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/germancardenasm/tours/issues"
+  },
+  "homepage": "https://github.com/germancardenasm/tours#readme",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}

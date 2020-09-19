@@ -1,0 +1,35 @@
+body{
+  font-family: Lato, 'Courier New', Courier, monospace;
+  font-weight: 400;
+  line-height: 1.7;
+  color: $gray-1;
+  padding: 30px;
+  box-sizing: border-box;    
+}
+
+.main-title{
+    color: $white;
+    backface-visibility: hidden;
+    margin-bottom:3rem;
+  
+    &--main{
+      text-transform: uppercase;
+      display: block;
+      font-size: 5rem;
+      font-weight: 400;
+      letter-spacing: 1.9rem;
+      animation-name: slideToRight;
+      animation-duration: 1s;
+        animation-timing-function: ease-out;
+    }
+    
+    &--sub{
+        text-transform: uppercase;
+        display: block;
+        font-size: 1.8rem;
+        font-weight: 700;
+        letter-spacing:0.87rem;
+        animation-name: slideToLeft;
+        animation-duration: 1s;
+    }
+  }
