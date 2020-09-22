@@ -66,23 +66,53 @@ body {
     animation-duration: 1s; }
 
 .secondary-title {
-  font-size: 3rem;
+  font-size: 3.5rem;
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
   color: transparent;
-  background-image: linear-gradient(to right, #7ed56f, #28b485cb);
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
   background-clip: text;
   -webkit-background-clip: text;
   transition: 0.5s ease; }
   .secondary-title:hover {
     transform: skewX(10deg) skewY(5deg); }
 
+.tertiary-title {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 1.25rem; }
+
+.paragraph {
+  font-size: 1.5rem;
+  font-weight: 400; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
 .text-centered {
   text-align: center; }
 
-.margin-bottom-8 {
+.margin-bottom-small {
   margin-bottom: 0.8rem; }
+
+.margin-bottom-medium {
+  margin-bottom: 3rem; }
+
+.margin-bottom-large {
+  margin-bottom: 7rem; }
+
+.padding-horizontal-small {
+  padding-left: 0.8rem;
+  padding-right: 0.8rem; }
+
+.padding-horizontal-medium {
+  padding-left: 3rem;
+  padding-right: 3rem; }
+
+.padding-horizontal-large {
+  padding-left: 7rem;
+  padding-right: 7rem; }
 
 .btn:link, .btn:visited {
   display: inline-block;
@@ -108,7 +138,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  content: "";
+  content: '';
   width: 100%;
   height: 100%;
   z-index: -1;
@@ -127,6 +157,70 @@ body {
 .btn--animated {
   animation: slideUp 1s ease-out 0.5s;
   animation-fill-mode: backwards; }
+
+.btn-text:link, .btn-text:visited {
+  display: inline-block;
+  position: relative;
+  color: #55c57c;
+  font-size: 1.6rem;
+  text-decoration: none;
+  padding: 3px;
+  border-bottom: 1px solid #55c57c;
+  transition: all 0.2s; }
+
+.btn-text:hover {
+  background-color: #55c57c;
+  color: #ffffff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  transform: translateY(-0.3rem); }
+  .btn-text:hover::after {
+    transform: scaleX(1.5) scaleY(1.8);
+    opacity: 0; }
+
+.btn-text:active {
+  box-shadow: 0 0.7rem 1rem rgba(0, 0, 0, 0.15);
+  transform: translateY(-0.2rem); }
+
+.image-collage {
+  position: relative; }
+  .image-collage__image {
+    position: absolute;
+    width: 65%;
+    z-index: 10;
+    outline-offset: 10px;
+    transition: all 0.2s; }
+    .image-collage__image--i1 {
+      top: -2rem; }
+    .image-collage__image--i2 {
+      top: 3rem;
+      right: 0; }
+    .image-collage__image--i3 {
+      top: 10rem;
+      left: 20%; }
+    .image-collage__image:hover {
+      outline: 1rem solid #55c57c;
+      transform: scale(1.05) translateY(-5px);
+      z-index: 20; }
+  .image-collage:hover .image-collage__image:not(:hover) {
+    transform: scale(0.95); }
+
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 3;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  transition: all 0.3s;
+  height: 35rem; }
+  .feature-box__icon {
+    font-size: 6rem;
+    color: transparent;
+    background-image: linear-gradient(to right, #7ed56f, #28b485);
+    background-clip: text;
+    -webkit-background-clip: text; }
+  .feature-box:hover {
+    transform: translateY(-1rem) scale(1.05); }
 
 .row {
   max-width: 114rem;
@@ -157,7 +251,7 @@ body {
 .header {
   position: relative;
   height: 95vh;
-  background-image: linear-gradient(to right bottom, #55c57cba, #28b485cb), url("../img/hero.jpg");
+  background-image: linear-gradient(to right bottom, rgba(85, 197, 124, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
   background-position: top;
   background-size: cover;
   clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); }
@@ -174,7 +268,13 @@ body {
     transform: translate(-50%, -50%);
     text-align: center; }
 
-.main-section {
-  padding-top: 22vh;
-  background-color: #f8f8f8;
-  margin-top: -20vh; }
+.section-about {
+  margin-top: -20vh;
+  padding: 25rem 0;
+  background-color: #f8f8f8; }
+
+.section-features {
+  padding: 20rem 0;
+  background-image: linear-gradient(to right bottom, rgba(85, 197, 124, 0.8), rgba(40, 180, 133, 0.8)), url("../img/nat-4.jpg");
+  background-position: top;
+  background-size: cover; }

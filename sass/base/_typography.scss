@@ -35,7 +35,7 @@ body {
 }
 
 .secondary-title {
-  font-size: 3rem;
+  font-size: 3.5rem;
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
@@ -46,5 +46,20 @@ body {
   transition: 0.5s ease;
   &:hover {
     transform: skewX(10deg) skewY(5deg);
+  }
+}
+
+.tertiary-title {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: $margin-small;
+}
+
+.paragraph {
+  font-size: 1.5rem;
+  font-weight: 400;
+  &:not(:last-child) {
+    margin-bottom: 3rem;
   }
 }

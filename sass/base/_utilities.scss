@@ -1,6 +1,27 @@
 .text-centered {
   text-align: center;
 }
-.margin-bottom-8 {
+.margin-bottom-small {
   margin-bottom: 0.8rem;
+}
+.margin-bottom-medium {
+  margin-bottom: 3rem;
+}
+.margin-bottom-large {
+  margin-bottom: 7rem;
+}
+
+.padding-horizontal-small {
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+
+.padding-horizontal-medium {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.padding-horizontal-large {
+  padding-left: 7rem;
+  padding-right: 7rem;
 }

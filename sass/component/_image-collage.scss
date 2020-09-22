@@ -1,0 +1,30 @@
+.image-collage {
+  position: relative;
+  &__image {
+    position: absolute;
+    width: 65%;
+    z-index: 10;
+    outline-offset: 10px;
+    transition: all 0.2s;
+    &--i1 {
+      top: -2rem;
+    }
+    &--i2 {
+      top: 3rem;
+      right: 0;
+    }
+    &--i3 {
+      top: 10rem;
+      left: 20%;
+    }
+    &:hover {
+      outline: 1rem solid $primary;
+      transform: scale(1.05) translateY(-5px);
+      z-index: 20;
+    }
+  }
+
+  &:hover &__image:not(:hover) {
+    transform: scale(0.95);
+  }
+}
