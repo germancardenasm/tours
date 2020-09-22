@@ -65,6 +65,25 @@ body {
     animation-name: slideToLeft;
     animation-duration: 1s; }
 
+.secondary-title {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  color: transparent;
+  background-image: linear-gradient(to right, #7ed56f, #28b485cb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: 0.5s ease; }
+  .secondary-title:hover {
+    transform: skewX(10deg) skewY(5deg); }
+
+.text-centered {
+  text-align: center; }
+
+.margin-bottom-8 {
+  margin-bottom: 0.8rem; }
+
 .btn:link, .btn:visited {
   display: inline-block;
   position: relative;
@@ -109,6 +128,32 @@ body {
   animation: slideUp 1s ease-out 0.5s;
   animation-fill-mode: backwards; }
 
+.row {
+  max-width: 114rem;
+  margin: 0 auto; }
+  .row::after {
+    content: '';
+    display: table;
+    clear: both; }
+  .row:not(:last-child) {
+    margin-bottom: 5rem; }
+  .row [class^='col-'] {
+    float: left; }
+    .row [class^='col-']:not(:last-child) {
+      margin-right: 5rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 5rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 5rem* 2) / 3); }
+  .row .col-2-of-3 {
+    width: calc(2 * (100% - 5rem* 2) / 3 + 5rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 5rem* 3) / 4); }
+  .row .col-2-of-4 {
+    width: calc(2 * (100% - 5rem* 3) / 4 + 5rem); }
+  .row .col-3-of-4 {
+    width: calc(3 * (100% - 5rem* 3) / 4 + 2 *5rem); }
+
 .header {
   position: relative;
   height: 95vh;
@@ -128,3 +173,8 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
+
+.main-section {
+  padding-top: 22vh;
+  background-color: #f8f8f8;
+  margin-top: -20vh; }
