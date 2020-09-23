@@ -8,7 +8,7 @@
     font-weight: 700;
     text-decoration: none;
     border-radius: 10rem;
-    padding: 0 2rem;
+    padding: 1rem 3rem;
     box-shadow: 0 0.5rem 1rem rgba($black, 0.4);
     transition: all 0.2s;
   }
@@ -45,6 +45,17 @@
   &--white {
     background-color: $white;
     color: $gray-1;
+    &::after {
+      background-color: $white;
+    }
+  }
+
+  &--green {
+    background-color: $primary;
+    color: $white;
+    &::after {
+      background-color: $primary;
+    }
   }
 
   &--animated {

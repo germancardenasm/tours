@@ -4,7 +4,7 @@
   -webkit-perspective: 150rem;
   position: relative;
   height: 30rem;
-  width: 20rem;
+  width: 25rem;
   height: 50rem;
 
   &__side {
@@ -15,13 +15,25 @@
     height: 50rem;
     transition: all 0.8s ease;
     backface-visibility: hidden;
+    box-shadow: 0 1.5rem 2rem rgba($black, 0.15);
 
     &--front {
-      background-color: orange;
+      background-color: $white;
     }
     &--back {
-      background-color: yellow;
       transform: rotateY(-180deg);
+    }
+
+    &--back--1 {
+      background-image: linear-gradient(to right bottom, $secondary-light, $secondary-dark);
+    }
+
+    &--back--2 {
+      background-image: linear-gradient(to right bottom, $primary-light, $primary-dark);
+    }
+
+    &--back--3 {
+      background-image: linear-gradient(to right bottom, $tertiary-light, $tertiary-dark);
     }
   }
 
@@ -30,5 +42,98 @@
   }
   &:hover &__side--back {
     transform: rotateY(0);
+  }
+  &__header-image {
+    height: 20rem;
+    background-blend-mode: screen;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    &--1 {
+      background-image: url('../../img/nat-5.jpg'),
+        linear-gradient(to right bottom, $secondary-light, $secondary-dark);
+    }
+    &--2 {
+      background-image: url('../../img/nat-6.jpg'),
+        linear-gradient(to right bottom, $primary-light, $primary-dark);
+    }
+    &--3 {
+      background-image: url('../../img/nat-7.jpg'),
+        linear-gradient(to right bottom, $tertiary-light, $tertiary-dark);
+    }
+  }
+  &__header-title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    position: absolute;
+    top: 10rem;
+    right: 2.5rem;
+    width: 80%;
+    text-align: right;
+    color: $white;
+  }
+  &__header-span {
+    padding: 0.8rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    &--1 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($secondary-light, 0.85),
+        rgba($secondary-dark, 0.85)
+      );
+    }
+    &--2 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($primary-light, 0.85),
+        rgba($primary-dark, 0.85)
+      );
+    }
+    &--3 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($tertiary-light, 0.85),
+        rgba($tertiary-dark, 0.85)
+      );
+    }
+  }
+  &__description {
+    font-size: 1.5rem;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 3rem;
+    ul {
+      text-align: center;
+      list-style-type: none;
+      li {
+        padding: 1rem;
+        &:not(:last-child) {
+          border-bottom: 1px solid $gray-2;
+        }
+      }
+    }
+  }
+  &__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    color: $white;
+  }
+  &__price-box {
+    margin-bottom: 5rem;
+  }
+  &__price-only {
+    font-size: 2.6rem;
+  }
+  &__price-value {
+    font-size: 6rem;
+    font-weight: 100;
+  }
+
+  &__discover-all-container {
+    text-align: center;
   }
 }
