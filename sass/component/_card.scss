@@ -16,7 +16,8 @@
     transition: all 0.8s ease;
     backface-visibility: hidden;
     box-shadow: 0 1.5rem 2rem rgba($black, 0.15);
-
+    border-radius: 3px;
+    overflow: hidden;
     &--front {
       background-color: $white;
     }
@@ -131,9 +132,5 @@
   &__price-value {
     font-size: 6rem;
     font-weight: 100;
-  }
-
-  &__discover-all-container {
-    text-align: center;
   }
 }
